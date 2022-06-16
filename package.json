@@ -1,0 +1,47 @@
+{
+  "name": "solid-custom-scrollbars",
+  "version": "0.1.0",
+  "description": "Custom Scrollbars for Solid",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Dirag Biswas (https://github.com/diragb)",
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/diragb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diragb/solid-custom-scrollbars"
+  },
+  "bugs": {
+    "url": "https://github.com/diragb/solid-custom-scrollbars/issues"
+  },
+  "homepage": "https://github.com/diragb/solid-custom-scrollbars#readme",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"npm run build\""
+  },
+  "dependencies": {
+    "dom-css": "^2.1.0",
+    "raf": "^3.4.1"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.4.1"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "7.16.7",
+    "@types/jest": "^27.4.0",
+    "@types/raf": "^3.4.0",
+    "babel-preset-solid": "^1.4.0",
+    "cross-env": "^7.0.3",
+    "jest": "^27.4.7",
+    "solid-jest": "^0.2.0",
+    "solid-js": "^1.4.1",
+    "tsc-watch": "^5.0.3",
+    "typescript": "^4.5.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "keywords": [],
+  "license": "MIT"
+}

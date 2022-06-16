@@ -1,0 +1,2 @@
+// Exports:
+export default () => false
