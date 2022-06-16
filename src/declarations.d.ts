@@ -1,1 +1,1 @@
-declare module 'dom-css';
+declare module 'dom-css'

@@ -18,7 +18,12 @@ import getInnerHeight from '../utils/getInnerHeight'
 
 
 // Typescript:
-import { IValues, ScrollbarsProps, TContainerRef, TRef } from './types'
+import {
+  IValues,
+  ScrollbarsProps,
+  TContainerRef,
+  TRef
+} from './types'
 
 
 // Styles:
