@@ -1,5 +1,5 @@
 // Packages:
-import css from 'dom-css'
+import * as domcss from 'dom-css'
 
 
 // Variables:
@@ -11,7 +11,7 @@ export default (cacheEnabled = true) => {
   if (cacheEnabled && scrollbarWidth !== undefined) return scrollbarWidth
   if (typeof document !== 'undefined') {
     const div = document.createElement('div')
-    css(div, {
+    domcss.css(div, {
       width: '100px',
       height: '100px',
       position: 'absolute',
