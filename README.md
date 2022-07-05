@@ -75,7 +75,7 @@ const CustomScrollbars: Component = () => {
 }
 ```
 
-All properties are documented in the [API docs](https://github.com/diragb/solid-custom-scrollbars/blob/master/docs/API.md)
+All properties are documented in the [API docs](https://github.com/diragb/solid-custom-scrollbars/blob/master/docs/API.md).
 
 ## License
 MIT
