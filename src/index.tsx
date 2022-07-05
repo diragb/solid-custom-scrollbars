@@ -10,19 +10,20 @@ import {
 } from 'solid-js'
 import raf, { cancel as caf } from 'raf'
 import css from 'dom-css'
-import isString from '../utils/isString'
-import getScrollbarWidth from '../utils/getScrollbarWidth'
-import returnFalse from '../utils/returnFalse'
-import getInnerWidth from '../utils/getInnerWidth'
-import getInnerHeight from '../utils/getInnerHeight'
+import isString from './utils/isString'
+import getScrollbarWidth from './utils/getScrollbarWidth'
+import returnFalse from './utils/returnFalse'
+import getInnerWidth from './utils/getInnerWidth'
+import getInnerHeight from './utils/getInnerHeight'
 
 
 // Typescript:
-import {
+import type {
+  RenderComponentProps,
   IValues,
   ScrollbarsProps,
+  TRef,
   TContainerRef,
-  TRef
 } from './types'
 
 
@@ -601,3 +602,11 @@ const Scrollbars: Component<ScrollbarsProps> = (rawProps) => {
 
 // Exports:
 export default Scrollbars
+
+export type {
+  RenderComponentProps,
+  IValues,
+  ScrollbarsProps,
+  TRef,
+  TContainerRef
+}
