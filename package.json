@@ -1,6 +1,6 @@
 {
   "name": "solid-custom-scrollbars",
-  "version": "0.1.3",
+  "version": "0.1.2",
   "description": "Custom Scrollbars for Solid",
   "main": "dist/index/index.common.js",
   "module": "dist/index/index.module.js",
@@ -39,7 +39,7 @@
   },
   "exports": {
     ".": {
-      "solid": "./dist/index/index.jsx",
+      "solid": "./dist/index/index.js",
       "import": "./dist/index/index.module.js",
       "browser": "./dist/index/index.module.js",
       "require": "./dist/index/index.common.js",

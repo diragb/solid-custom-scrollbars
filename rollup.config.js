@@ -5,7 +5,7 @@ import withSolid from 'rollup-preset-solid'
 // Exports:
 export default withSolid([
   {
-    input: 'src/index.tsx',
+    input: 'src/index.ts',
     targets: [ 'esm', 'cjs' ]
   }
 ])
