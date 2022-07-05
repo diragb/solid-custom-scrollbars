@@ -1,6 +1,6 @@
 {
   "name": "solid-custom-scrollbars",
-  "version": "0.1.4",
+  "version": "0.1.3",
   "description": "Custom Scrollbars for Solid",
   "main": "dist/index/index.common.js",
   "module": "dist/index/index.module.js",
