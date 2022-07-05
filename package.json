@@ -1,6 +1,6 @@
 {
   "name": "solid-custom-scrollbars",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Custom Scrollbars for Solid",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -20,10 +20,11 @@
   "scripts": {
     "prebuild": "npm run clean",
     "clean": "rimraf dist/",
-    "build": "npm run prebuild && npm run build:types && npm run build:js",
+    "build": "npm run prebuild && npm run build:types && npm run build:js && npm run postbuild",
     "build:watch": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"npm run build\"",
     "build:types": "tsc --emitDeclarationOnly",
-    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
+    "postbuild": "node postbuild.js"
   },
   "dependencies": {
     "dom-css": "^2.1.0",
@@ -49,6 +50,16 @@
     "tsc-watch": "^5.0.3",
     "typescript": "^4.5.4"
   },
-  "keywords": ["scrollbars", "scrolling", "solid", "custom scrollbars", "ui"],
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "scrollbars",
+    "scrolling",
+    "solid",
+    "custom scrollbars",
+    "ui"
+  ],
   "license": "MIT"
 }
