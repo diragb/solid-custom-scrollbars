@@ -2,8 +2,6 @@
   "name": "solid-custom-scrollbars",
   "version": "0.1.7",
   "description": "Custom Scrollbars for Solid",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "author": "Dirag Biswas (https://github.com/diragb)",
   "funding": {
     "type": "individual",
@@ -17,10 +15,30 @@
     "url": "https://github.com/diragb/solid-custom-scrollbars/issues"
   },
   "homepage": "https://github.com/diragb/solid-custom-scrollbars#readme",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "module": "./dist/index.js",
+  "exports": {
+    "solid": {
+      "development": "./dist/dev.jsx",
+      "import": "./dist/index.jsx"
+    },
+    "development": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/dev.js"
+      }
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
     "prebuild": "npm run clean",
     "clean": "rimraf dist/",
-    "build": "npm run prebuild && npm run build:types && npm run build:js && npm run postbuild",
+    "build": "tsup",
     "build:watch": "tsc-watch --noClear -p ./tsconfig.json --onSuccess \"npm run build\"",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
@@ -31,9 +49,11 @@
     "raf": "^3.4.1"
   },
   "peerDependencies": {
-    "solid-js": "^1.4.1"
+    "solid-js": "^1.8.7"
   },
   "devDependencies": {
+    "tsup": "^8.0.1",
+    "tsup-preset-solid": "^2.2.0",
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.5",
     "@babel/preset-env": "^7.18.2",
@@ -46,7 +66,7 @@
     "jest": "^27.4.7",
     "rimraf": "^3.0.2",
     "solid-jest": "^0.2.0",
-    "solid-js": "^1.4.1",
+    "solid-js": "^1.8.7",
     "tsc-watch": "^5.0.3",
     "typescript": "^4.5.4"
   },
@@ -61,5 +81,7 @@
     "custom scrollbars",
     "ui"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "browser": {},
+  "typesVersions": {}
 }
